@@ -14,9 +14,9 @@
         Tooltip,
         IconButton,
         FormGroup,
+        Switch,
         styled
     } from '@mui/material';
-    import Switch from '@mui/material/Switch';
     import Timeline from '@mui/lab/Timeline';
     import TimelineItem from '@mui/lab/TimelineItem';
     import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -67,8 +67,6 @@
     { name: "Vehicle Trip Details", icon: <CommuteTwoToneIcon /> },
   ];
 const UserRoleCreateModals = (props) => {
-
-     
   return (
     <>
       <Dialog onClose={props.handleModalClose} open={props.open} className='custom-scrollbar'>
@@ -82,7 +80,7 @@ const UserRoleCreateModals = (props) => {
                     size="small"
                     className='modal-close-icon'
                     >
-                    <CloseTwoTone fontSize="small" />
+                    <CloseTwoTone fontSize="small" onClick={props.handleModalClose}/>
                     </IconButton>
                 </Tooltip>
               <Divider />
