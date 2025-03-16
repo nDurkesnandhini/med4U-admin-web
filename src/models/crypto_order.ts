@@ -13,3 +13,12 @@ export interface CryptoOrder {
   cryptoCurrency: string;
   currency: string;
 }
+
+export type RoleManagementStatus = 'completed' | 'pending' | 'failed';
+
+export interface RoleManagement {
+  id: string;
+  status: RoleManagementStatus;
+  roleName: string;
+}
+
